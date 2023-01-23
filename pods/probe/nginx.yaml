@@ -1,0 +1,21 @@
+# 1.create a nginx pod
+# 2. kubectl expose pod nginx --port 80
+# 3. create a curl pod and command sleep 1000 
+# 4. exec into pod and curl nginx.default.svc.cluster.local
+
+# kubectl run nginx --image=nginx
+# kubectl expose pod nginx --port 80
+# kubectl run curl --image=curlimages/curl --command sleep 1000 
+# kubectl exec -it curl -- sh 
+# curl nginx.default.svc.cluster.local
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

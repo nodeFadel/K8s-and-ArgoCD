@@ -9,8 +9,7 @@ spec:
   source:
     repoURL: https://github.com/nodeFadel/K8s-and-ArgoCD.git
     targetRevision: HEAD
-    # type: git
-    # insecure: true. 
+    path: pods/probe
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp

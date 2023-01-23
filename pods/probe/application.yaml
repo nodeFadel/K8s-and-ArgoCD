@@ -10,6 +10,8 @@ spec:
     repoURL: https://github.com/nodeFadel/K8s-and-ArgoCD.git
     targetRevision: Head
     path: pods/probe
+    type: git
+    insecure: true. 
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
@@ -21,3 +23,16 @@ spec:
     automated:
       selfHeal: true
       prune: true
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: private-repo-creds
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repo-creds
+data:
+  sshPrivateKey: 
+    name: private-repo-creds
+    key: RmFkZWxAMTIzNDU2Nzg5Cg==

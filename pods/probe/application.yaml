@@ -21,16 +21,3 @@ spec:
     automated:
       selfHeal: true
       prune: true
-
-# ---
-# apiVersion: v1
-# kind: Secret
-# metadata:
-#   name: private-repo-creds
-#   namespace: argocd
-#   labels:
-#     argocd.argoproj.io/secret-type: repo-creds
-# data:
-#   sshPrivateKey: 
-#     name: private-repo-creds
-#     key: argocd-root-password

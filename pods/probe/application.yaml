@@ -35,4 +35,4 @@ metadata:
 data:
   sshPrivateKey: 
     name: private-repo-creds
-    key: RmFkZWxAMTIzNDU2Nzg5Cg==
+    key: argocd-root-password

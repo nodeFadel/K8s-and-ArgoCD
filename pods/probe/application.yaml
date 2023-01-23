@@ -8,8 +8,7 @@ spec:
   
   source:
     repoURL: https://github.com/nodeFadel/K8s-and-ArgoCD.git
-    targetRevision: Head
-    path: pods/probe
+    targetRevision: HEAD
     # type: git
     # insecure: true. 
   destination:
